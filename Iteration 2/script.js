@@ -1,7 +1,10 @@
-var store = GetStore;
-var view = ProductView(document.querySelector('#root'), store);
-console.log(store.getProducts());
+import GetStore  from './store.js';
 
-setInterval(function () {
-    view.render(new Date().getTime());
-  }, 500);
+
+var store = new GetStore;
+
+store.renderProducts();
+
+//setInterval(function () {
+  
+//  }, 500);
